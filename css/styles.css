@@ -1,0 +1,166 @@
+body {
+   color: #333333;
+   font-family: 'Nunito', sans-serif;;
+   display: flex;
+   height: 96vh;
+ }
+
+ #app {
+   float: right;
+   width: 456px;
+   margin: auto;
+   box-shadow: 4px 4px 20px #888;
+   padding: 20px;
+   border-radius: 16px;
+ }
+ 
+#Log {
+   width: 456px;
+   margin: auto;
+   padding: 20px;
+}
+
+ .center {
+   text-align: center;
+ }
+
+ .left{
+   float: left;
+    text-align: left;
+    margin-left:64px;
+ }
+ 
+ .IniOculta {
+   display: none;
+ }
+ 
+ h3 {
+   font-family: 'Poppins', sans-serif;
+   margin: 16px;
+   font-weight: bold;
+ }
+
+ input {
+   width: 360px;
+   margin: 4px;
+   padding: 4px;
+   font-size: 15px;
+   border-radius: 8px;
+   border: 1px solid #F2F2F2;
+   background-color:#F2F2F2;
+   outline: none;
+ }
+ 
+ button {
+   width: 360px;
+   font-family: 'Roboto', sans-serif;
+   font-size: 15px;
+   color: #FFFFFF;
+   padding: 4px;
+   margin: 4px;
+   border-radius: 4px;
+   border: none;
+   outline: none;
+ }
+ 
+ button:hover {
+   opacity: 0.75;
+   cursor: pointer;
+ }
+ 
+ p {
+   margin: 16px;
+   font-size: 12px;
+ }
+ 
+ .CorBotaoAcessar {
+  background-color: #007AFF;
+ }
+ .CorBotaoCadastrar {
+  color: #007AFF;
+  width:100;
+  font-size: 12px;
+  background: none;
+ 
+ }
+ .CorBotaoDeletar {
+   background-color: #c44;
+ }
+ .CorBotaoDeletarAlterar {
+  color: #007AFF;
+  width: 64px;
+  height: 24px;
+  float: right;
+  margin-top:-3px;
+  margin-left:-1px;
+}
+.CorBotaoDeletarExcluir {
+  color: #c44;
+  width: 64px;
+  height: 24px;
+  float: right;
+  margin-top:-3px;
+  margin-left:-1px;
+}
+
+
+
+ .logado {
+   display: none;
+ }
+
+ #carregando {
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 200px);
+    z-index: 1;
+ }
+
+ #AcessarGoogle{
+   cursor: pointer;
+   margin: 32px;
+ 
+  
+ }
+
+ #auth img{
+    cursor: pointer;
+    margin: 4px;
+ }
+
+ button:hover {
+   opacity: 0.75;
+ }
+
+ #ImgUsuario{
+    height: 40px;
+    border-radius: 100%;
+ }
+
+ ul {
+   list-style-type: none;
+   padding: 0;
+ }
+ 
+ li {
+   padding: 8px;
+   text-align: left;
+ }
+ 
+ li:hover {
+   background-color: #ddd;
+   border-radius: 8px;
+ }
+ 
+ .listaBtn {
+   float: right;
+   margin: 0 0 0 4px;
+   position: relative;
+   bottom: 3px;
+ }
+ 
+ span {
+   position: relative;
+   bottom: 3px;
+ }
+ @import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins:wght@600&family=Roboto&display=swap');

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Controle de acesso</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <div id="app" class="center">
+
+        <div id="logo">
+            <img src="img/logoIF.png" alt="logotipo da instituição">
+
+        </div>
+        <div id="carregando">
+            <img src="img/carregando.gif" alt="Carregando">
+        </div>
+        <div id="auth" class="center">
+            <form id="FrmAutentica">
+                <h3 id="FrmAutenticaTitulo">Controle de Acesso</h3>
+                <label class="left" for="email">E-mail</label><br>
+                <input type="email" placeholder="E-mail" id="email"><br><br>
+
+                <label class="left" for="senha">Senha</label><br>
+                <input type="password" placeholder="Senha" id="senha">
+
+                <button type="submit" class="CorBotaoAcessar" id="FrmAutenticaSubmit">Acessar</button>
+            </form>
+        </div>
+
+        <p id="Registrar">
+            Não possui cadastro?
+            <button class="CorBotaoCadastrar" onclick="RealizarCadastro()">Cadastre-se</button>
+        </p>
+
+        <p id="Acessar" class="IniOculta">
+            Já possui cadastro?
+            <button class="CorBotaoCadastrar" onclick="RealizarAcesso()">Acessar</button>
+        </p>
+        <img src="img/divider.svg" alt="">
+        <p id="AcessarGoogle">
+            <img src="img/google.svg" class="loginGoogle" alt="Logotipo da google" onclick="LoginGoogle()">
+        </p>
+
+    </div>
+
+    <div id="Log" class="IniOculta center">
+        <div id="Logado">
+            <img id="ImgUsuario">
+            <h3 id="UsuarioLogadoTitulo">Usuário autenticado: </h3>
+
+            <p id="VerificaEmail"></p>
+            <div id="EnviaVerificaEmail">
+                <button class="CorBotaoCadastrar" onclick="verificaEmail()">Verificar E-mail</button>
+            </div>
+
+            <button class="CorBotaoAcessar" onclick="signOut()">Sair</button>
+
+            <button class="CorBotaoDeletar" onclick="excluirUsuario()">Excluir conta</button>
+
+            <h3>Cientes cadastrados</h3>
+            <div id="ListaCliente">
+                <h3 id="ContaCliente">Total de Clientes</h3>
+                <div class="center">
+                    <label for="filtro">Buscar: </label>
+                    <input type="text" placeholder="Buscar" id="filtro">
+                </div>
+                <ul id="ulListaCliente"></ul>
+            </div>
+
+            <form id='FrmCliente'>
+                <h3 id='TituloFormCliente'>Cadastrar um novo Cliente</h3>
+
+                <label for="cli_nome">Nome: </label>
+                <input type="text" placeholder="Nome" id="cli_nome"><br>
+
+                <label for="cli_endereco">Endereço: </label>
+                <input type="text" placeholder="Endereço" id="cli_endereco"><br>
+
+                <label for="cli_cpf">CPF: </label>
+                <input type="number" placeholder="CPF" id="cli_cpf"><br>
+
+                <label for="cli_fone">Telefone: </label>
+                <input type="number" placeholder="Telefone" id="cli_fone"><br>
+
+                <button type="submit" class="CorBotaoAcessar" id="FrmCidadeBtnGravar">Salvar</button>
+                <div id="FrmCidadeAlterar" class="IniOculta">
+                    <button type="submit"> Confirmar alteração</button>
+                    <button type="button" class="alternative" onclick="cancelaUpdate()"> Cancelar </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-auth.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+
+    <script src="js/firebase.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/autentica.js"></script>
+    <script src="js/cliente.js"></script>
+</body>
+
+</html>
